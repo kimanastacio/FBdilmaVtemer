@@ -1,4 +1,4 @@
-# FBdilmaVtemer
+# FB DilmaVsTemer
 Análise das postagens do Facebook de Dilma Rousseff e Michel Temer em R
 
 Esse repositório contém ferramentas para analisar o conteúdo de postagens do Facebook extraídas pelo Netvizz.
