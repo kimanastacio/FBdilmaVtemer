@@ -1,5 +1,5 @@
 # FBdilmaVtemer
-Análise de conteúdo do Facebook de Dilma Rousseff e Michel Temer em R
+Análise das postagens do Facebook de Dilma Rousseff e Michel Temer em R
 
 Esse repositório contém ferramentas para analisar o conteúdo de postagens do Facebook extraídas pelo Netvizz.
 Os scripts estão em R e foram construídos com base nos trabalhos basilares de:
