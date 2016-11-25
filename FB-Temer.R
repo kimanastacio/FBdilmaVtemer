@@ -30,7 +30,7 @@ ctemer <- tm_map(ctemer, removePunctuation)
 #remove as stopwords
 ctemer <- tm_map(ctemer, function(x)removeWords(x,stopwords("pt")))
 # + palavras removidas
-ctemer <- tm_map(ctemer, function(x)removeWords(x,"após", "onde", "nesta","ainda", "todo", "todos", "disse", "afirmou", "anunciou", "destacou", "faz", "ser", "é"))
+ctemer <- tm_map(ctemer, function(x)removeWords(x,"apÃ³s", "onde", "nesta","ainda", "todo", "todos", "disse", "afirmou", "anunciou", "destacou", "faz", "ser", "Ã©"))
 
 #seleciona a cor (set1, 2 ou 3)
 pal = brewer.pal(5, "Set2")
@@ -49,7 +49,7 @@ tdm
 
 term.freq <- rowSums(as.matrix(tdm))
 
-#seleciona apenas as com frequência >=20
+#seleciona apenas as com frequencia >=20
 term.freq <- subset(term.freq, term.freq >=20)
 df <- data.frame(term = names(term.freq), freq = term.freq)
 
@@ -70,9 +70,9 @@ dim(df)
 df.scale <- scale(df)
 d <- dist(df.scale, method = "euclidean")
 
-#grafico de clusterização hierarquica
+#grafico de clusterizaÃ§Ã£o hierarquica
 fit.ward2 <- hclust(d, method = "ward.D2")
-plot(fit.ward2, main="Clusterização Hierárquica\nFacebook - Temer", xlab = " 31/08/2016 a 10/11/2016")
+plot(fit.ward2, main="ClusterizaÃ§Ã£o HierÃ¡rquica\nFacebook - Temer", xlab = " 31/08/2016 a 10/11/2016")
 rect.hclust(fit.ward2, k=5)
 
 #Semantica
